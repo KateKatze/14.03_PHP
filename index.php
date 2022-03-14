@@ -39,8 +39,8 @@
     </nav>
 
     <!-- Hero -->
-    <div class="p-5 text-center bg-image" style="background-image: url('https://cdn.pixabay.com/photo/2013/07/12/12/45/car-146185_1280.png'); height: 600px; background-size: cover;">
-        <div class="mask rounded" style="background-color: rgba(0, 0, 0, 0.4); height: 500px;">
+    <div class="p-5 text-center bg-image" style="background-image: url('https://cdn.pixabay.com/photo/2013/07/12/12/45/car-146185_1280.png'); height: 85vh; background-size: cover;">
+        <div class="mask rounded" style="background-color: rgba(0, 0, 0, 0.4); height: 80vh;">
             <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="text-white">
                     <h1 class="mb-3">Car Rental</h1>
@@ -58,44 +58,44 @@
     "Ford" => array(
         "pic" => "https://cdn.pixabay.com/photo/2012/11/02/13/02/car-63930__480.jpg",
         "name" => "Ford Mustang",
-        "availability" => "Availability: Available",
+        "availability" => "Available",
         "price" => "50$/day",
-        "location" => "Teststreet 1, Office, City"
+        "location" => "Office: Teststreet 1, City"
     ),
     "Tesla" => array(
         "pic" => "https://images.pexels.com/photos/7985573/pexels-photo-7985573.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         "name" => "Tesla Model X",
-        "availability" => "Availability: Available",
+        "availability" => "Available",
         "price" => "80$/day",
-        "location" => "Street 5, Office, City"
+        "location" => "Office: Street 5, City"
     ),
     "Fiat" => array(
         "pic" => "https://images.pexels.com/photos/7459480/pexels-photo-7459480.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         "name" => "Fiat Punto",
-        "availability" => "Availability: Not available",
+        "availability" => "Not available",
         "price" => "30$/day",
-        "location" => "Central Street 10, Office, City"
+        "location" => "Office: Central Street 10, City"
     ),
     "Seat" => array(
         "pic" => "https://cdn.pixabay.com/photo/2021/08/16/16/19/car-6550633__340.jpg",
         "name" => "Seat Leon",
-        "availability" => "Availability: Available",
+        "availability" => "Available",
         "price" => "40$/day",
-        "location" => "Teststreet 1, Office, City"
+        "location" => "Office: Teststreet 1, City"
     ),
     "Hyundai" => array(
         "pic" => "https://images.pexels.com/photos/11194510/pexels-photo-11194510.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         "name" => "Hyundai Santa Fe",
-        "availability" => "Availability: Not available",
+        "availability" => "Not available",
         "price" => "35$/day",
-        "location" => "Street 5, Office, City"
+        "location" => "Office: Street 5, City"
     ),
     "Kia" => array(
         "pic" => "https://images.pexels.com/photos/9714429/pexels-photo-9714429.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         "name" => "Kia Sorento",
-        "availability" => "Availability: Available",
+        "availability" => "Available",
         "price" => "35$/day",
-        "location" => "Central Street 10, Office, City"
+        "location" => "Office: Central Street 10, City"
     )
     );
 
@@ -105,76 +105,76 @@
 
     <div class="container mt-5 mb-5">
 
-        <div class="row row-cols-3">
-            <div class="card border">
+        <div class="row row-cols-xl-3 row-cols-lg-4 row-cols-md-6 row-cols-sm-6 mt-3 justify-content-center">
+            <div class="card mt-3 me-3" style="width: 18rem;">
                 <img src="<?php echo $cars["Ford"]["pic"] ?>" class="card-img-top" alt="...">
                 <hr>
-                <div class="card-title">
-                    <h5><?php echo $cars["Ford"]["name"] ?></h5>
-                </div>
                 <div class="card-body">
-                    <p class="card-text"><?php echo $cars["Ford"]["availability"] ?></p>
+                    <h5 class="card-title"><?php echo $cars["Ford"]["name"] ?></h5>
+                    <hr style="width: 70%">
+                    <p class="card-text text-success"><?php echo $cars["Ford"]["availability"] ?></p>
                     <p class="card-text"><?php echo $cars["Ford"]["price"] ?></p>
                     <p class="card-text"><?php echo $cars["Ford"]["location"] ?></p>
                 </div>
             </div>
 
-            <div class="card border">
-            <img src="<?php echo $cars["Tesla"]["pic"] ?>" class="card-img-top" alt="...">
-            <div class="card-title">
-                <h5><?php echo $cars["Tesla"]["name"] ?></h5>
-            </div>
+            <div class="card mt-3 me-3" style="width: 18rem;">
+                <img src="<?php echo $cars["Tesla"]["pic"] ?>" class="card-img-top" alt="...">
+                <hr>
                 <div class="card-body">
-                    <p class="card-text"><?php echo $cars["Tesla"]["availability"] ?></p>
+                    <h5 class="card-title"><?php echo $cars["Tesla"]["name"] ?></h5>
+                    <hr style="width: 70%">
+                    <p class="card-text text-success"><?php echo $cars["Tesla"]["availability"] ?></p>
                     <p class="card-text"><?php echo $cars["Tesla"]["price"] ?></p>
                     <p class="card-text"><?php echo $cars["Tesla"]["location"] ?></p>
-            </div></div>
-
-            <div class="card border">
-            <img src="<?php echo $cars["Fiat"]["pic"] ?>" class="card-img-top" alt="...">
-            <div class="card-title">
-                <h5><?php echo $cars["Fiat"]["name"] ?></h5>
+                </div>
             </div>
+
+            <div class="card mt-3 me-3" style="width: 18rem;">
+            <img src="<?php echo $cars["Fiat"]["pic"] ?>" class="card-img-top" alt="...">
+            <hr>
                 <div class="card-body">
-                    <p class="card-text"><?php echo $cars["Fiat"]["availability"] ?></p>
+                    <h5 class="card-title"><?php echo $cars["Fiat"]["name"] ?></h5>
+                    <hr style="width: 70%">
+                    <p class="card-text text-danger"><?php echo $cars["Fiat"]["availability"] ?></p>
                     <p class="card-text"><?php echo $cars["Fiat"]["price"] ?></p>
                     <p class="card-text"><?php echo $cars["Fiat"]["location"] ?></p>
                 </div>
             </div>
         </div>
 
-        <div class="row row-cols-3">
-            <div class="card border">
+        <div class="row row-cols-xl-3 row-cols-lg-4 row-cols-md-6 row-cols-sm-6 mt-3 justify-content-center">
+            <div class="card mt-3 me-3" style="width: 18rem;">
                 <img src="<?php echo $cars["Seat"]["pic"] ?>" class="card-img-top" alt="...">
-                <div class="card-title">
-                    <h5><?php echo $cars["Seat"]["name"] ?></h5>
-                </div>
+                <hr>
                 <div class="card-body">
-                    <p class="card-text"><?php echo $cars["Seat"]["availability"] ?></p>
+                    <h5 class="card-title"><?php echo $cars["Seat"]["name"] ?></h5>
+                    <hr style="width: 70%">
+                    <p class="card-text text-success"><?php echo $cars["Seat"]["availability"] ?></p>
                     <p class="card-text"><?php echo $cars["Seat"]["price"] ?></p>
                     <p class="card-text"><?php echo $cars["Seat"]["location"] ?></p>
                 </div>
             </div>
 
-            <div class="card border">
+            <div class="card mt-3 me-3" style="width: 18rem;">
             <img src="<?php echo $cars["Hyundai"]["pic"] ?>" class="card-img-top" alt="...">
-            <div class="card-title">
-                <h5><?php echo $cars["Hyundai"]["name"] ?></h5>
-            </div>
+            <hr>
                 <div class="card-body">
-                    <p class="card-text"><?php echo $cars["Hyundai"]["availability"] ?></p>
+                    <h5 class="card-title"><?php echo $cars["Hyundai"]["name"] ?></h5>
+                    <hr style="width: 70%">
+                    <p class="card-text text-danger"><?php echo $cars["Hyundai"]["availability"] ?></p>
                     <p class="card-text"><?php echo $cars["Hyundai"]["price"] ?></p>
                     <p class="card-text"><?php echo $cars["Hyundai"]["location"] ?></p>
                 </div>
             </div>
 
-            <div class="card border">
+            <div class="card mt-3 me-3" style="width: 18rem;">
             <img src="<?php echo $cars["Kia"]["pic"] ?>" class="card-img-top" alt="...">
-            <div class="card-title">
-                <h5><?php echo $cars["Kia"]["name"] ?></h5>
-            </div>
+            <hr>
                 <div class="card-body">
-                    <p class="card-text"><?php echo $cars["Kia"]["availability"] ?></p>
+                    <h5 class="card-title"><?php echo $cars["Kia"]["name"] ?></h5>
+                    <hr style="width: 70%">
+                    <p class="card-text text-success"><?php echo $cars["Kia"]["availability"] ?></p>
                     <p class="card-text"><?php echo $cars["Kia"]["price"] ?></p>
                     <p class="card-text"><?php echo $cars["Kia"]["location"] ?></p>
                 </div>
